@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1>Taller de <%= @name %></h1>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <p><%= @description %></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <a href="/<%= @name %>/edit" class="btn btn-primary">Editar taller</a><br><br>
+            <form action="/<%= @name %>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <input type="submit" name="delete" value="Borrar taller" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>

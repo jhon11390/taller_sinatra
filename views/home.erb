@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-5">
+            <h1>Talleres del ciclo Escolar</h1>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <% @files.each do |file|%>
+                <a href="/<%= File.basename(file, ".*")%>"><%= File.basename(file, ".*") %></a><br>
+            <% end %>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-2">
+            <a href="/create" class="btn btn-secondary">Nuevo Taller</a>
+        </div>
+    </div>
+</div>
+
